@@ -7,8 +7,18 @@
 		{% endif %}
 	</head>
 	<body>
-		<div> Blog: <a href = "/index">Home</a></div>
-		<hr>
+		<div> <a href = "/index">Home</a>
+		<a href = "/login">Login </a> </div>
+		<hr> <!-- define thematic change in content-->
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul> <!-- displays unordered list-->
+				{% for message in messages %}
+					<li> {{message}} </li> <!-- displays list item-->
+				{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
 		{% block content %}{% endblock %}
 	</body>
 </html>

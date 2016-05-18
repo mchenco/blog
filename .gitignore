@@ -1,4 +1,12 @@
-led / optimized / DLL files
+#vim files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+#led / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
